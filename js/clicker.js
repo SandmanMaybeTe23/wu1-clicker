@@ -37,18 +37,18 @@ let active = false; // exempel för att visa att du kan lägga till klass för a
 
 let achievements = [
     {
-        description: 'Museet är redo att öppna, grattis! ',
+        description: 'First modifications but many more to go ',
         requiredUpgrades: 1,
         acquired: false,
     },
     {
-        description: 'Nu börjar det likna något, fortsätt gräva!',
+        description: 'Now you starting to get the gang of this game',
         requiredUpgrades: 10,
         acquired: false,
     },
     {
-        description: 'Klickare, med licens att klicka!',
-        requiredClicks: 10,
+        description: 'Buy you first modifications',
+        requiredClicks: 5,
         acquired: false,
     },
     {
@@ -163,25 +163,33 @@ window.addEventListener('load', (event) => {
  */
 upgrades = [
     {
-        name: 'Sop',
-        cost: 10,
+        name: 'Improve Production',
+        cost: 5,
         amount: 1,
     },
     {
-        name: 'Kvalitetsspade',
-        cost: 50,
+        name: 'Increase Research Capacity ',
+        cost: 25,
         clicks: 2,
     },
     {
-        name: 'Skottkärra',
-        cost: 100,
+        name: 'Better Transmison',
+        cost: 50,
         amount: 10,
     },
     {
-        name: 'Grävmaskin',
-        cost: 1000,
+        name: 'Bigger Cannon',
+        cost: 500,
         amount: 100,
     },
+    {
+        name: 'More Armor',
+        cost: 5000,
+        amount: 1000,
+    },
+
+
+
 ];
 
 /* createCard är en funktion som tar ett upgrade objekt som parameter och skapar
@@ -209,23 +217,23 @@ function createCard(upgrade) {
     header.classList.add('title');
     const cost = document.createElement('p');
     if (upgrade.amount) {
-        header.textContent = `${upgrade.name}, +${upgrade.amount} per sekund.`;
+        header.textContent = `${upgrade.name}, +${upgrade.amount} per second.`;
     } else {
-        header.textContent = `${upgrade.name}, +${upgrade.clicks} per klick.`;
+        header.textContent = `${upgrade.name}, +${upgrade.clicks} per Click.`;
     }
-    cost.textContent = `Köp för ${upgrade.cost} benbitar.`;
+    cost.textContent = `Buy for ${upgrade.cost} RP.`;
 
     card.addEventListener('click', (e) => {
         if (money >= upgrade.cost) {
             acquiredUpgrades++;
             money -= upgrade.cost;
-            upgrade.cost *= 1.5;
-            cost.textContent = 'Köp för ' + upgrade.cost + ' benbitar';
+            upgrade.cost *= 2;
+            cost.textContent = 'Buy for ' + upgrade.cost + 'RP';
             moneyPerSecond += upgrade.amount ? upgrade.amount : 0;
             moneyPerClick += upgrade.clicks ? upgrade.clicks : 0;
-            message('Grattis du har köpt en uppgradering!', 'success');
+            message('You get new modifications  ', 'success');
         } else {
-            message('Du har inte råd.', 'warning');
+            message('You Dont got the money .', 'warning');
         }
     });
 

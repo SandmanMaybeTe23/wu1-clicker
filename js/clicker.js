@@ -23,13 +23,17 @@ const audioAchievement = document.querySelector('#swoosh');
  * värden, utan då använder vi let.
  * Läs mer: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
  */
-let money = 0;
+let money = 100000000;
 let moneyPerClick = 1;
 let moneyPerSecond = 0;
 let acquiredUpgrades = 0;
 let last = 0;
 let numberOfClicks = 0; // hur många gånger har spelare eg. klickat
 let active = false; // exempel för att visa att du kan lägga till klass för att indikera att spelare får valuta
+
+
+
+    
 
 // likt upgrades skapas här en array med objekt som innehåller olika former
 // av achievements.
@@ -117,7 +121,7 @@ function step(timestamp) {
         }
         if (
             achievement.requiredUpgrades &&
-            acquiredUpgrades >= achievement.requiredUpgrades
+            acquiredUpgrades >= achievement.requiredUpgrades 
         ) {
             achievement.acquired = true;
             message(achievement.description, 'achievement');
@@ -261,3 +265,13 @@ function message(text, type) {
         p.parentNode.removeChild(p);
     }, 2000);
 }
+
+
+
+
+
+
+    
+
+
+

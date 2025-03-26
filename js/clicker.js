@@ -15,6 +15,24 @@ const upgradesTracker = document.querySelector('#upgrades');
 const upgradeList = document.querySelector('#upgradelist');
 const msgbox = document.querySelector('#msgbox');
 const audioAchievement = document.querySelector('#swoosh');
+const imgChanger = document.querySelector('#tank1')
+const imgChanger2 = document.querySelector('#tank2')
+const imgChanger3 = document.querySelector('#tank3')
+const imgChanger4 = document.querySelector('#tank4')
+const imgChanger5 = document.querySelector('#tank5')
+
+imgChanger.classList.add("tank")
+imgChanger2.classList.add("d-none")
+imgChanger3.classList.add("d-none")
+
+
+
+
+clickerButton.textContent = "Jag är nu ändrad på"
+clickerButton.classList.add("korv")
+
+
+
 
 /* Följande variabler använder vi för att hålla reda på hur mycket pengar som
  * spelaren, har och tjänar.
@@ -33,7 +51,7 @@ let active = false; // exempel för att visa att du kan lägga till klass för a
 
 
 
-    
+
 
 // likt upgrades skapas här en array med objekt som innehåller olika former
 // av achievements.
@@ -107,6 +125,11 @@ function step(timestamp) {
     if (moneyPerSecond > 0 && !active) {
         mpsTracker.classList.add('active');
         active = true;
+    }
+    if (acquiredUpgrades >=10){
+    imgChanger.classList.remove("tank")
+    imgChanger.classList.toggle("d-none")
+    imgChanger2.classList.toggle("tank")
     }
 
     // achievements, utgår från arrayen achievements med objekt
@@ -265,6 +288,14 @@ function message(text, type) {
         p.parentNode.removeChild(p);
     }, 2000);
 }
+
+
+
+
+
+
+
+
 
 
 

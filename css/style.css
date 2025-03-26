@@ -22,6 +22,10 @@
     --space-4xl-5xl: clamp(7.88rem, calc(7.14rem + 3.7vw), 10rem);
 }
 
+.korv {
+    color: red;
+}
+
 body {
     background-color: var(--color-light);
     color: var(--color-dark);
@@ -62,11 +66,13 @@ audio {
     display: flex;
     flex-direction: column;
     grid-template-areas: 'stack';
-    border: black solid 50px;
-    background-image: url();
+    border: black solid 10px;
     background-size: cover;
     background-position: center;
-    padding:250px; 
+    background:blue ;
+    padding:50px;
+
+     
 
 }
 
@@ -254,8 +260,9 @@ audio {
 
 }
 
-#tank2{
- size: 100px;
+.tank{
+ display: flex;
+ 
 
 
 }

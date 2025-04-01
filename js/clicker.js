@@ -20,10 +20,13 @@ const imgChanger2 = document.querySelector('#tank2')
 const imgChanger3 = document.querySelector('#tank3')
 const imgChanger4 = document.querySelector('#tank4')
 const imgChanger5 = document.querySelector('#tank5')
-
+const imgChanger6 = document.querySelector('#tank6')
 imgChanger.classList.add("tank")
 imgChanger2.classList.add("d-none")
 imgChanger3.classList.add("d-none")
+imgChanger4.classList.add("d-none")
+imgChanger5.classList.add("d-none")
+imgChanger6.classList.add("d-none")
 
 
 
@@ -48,7 +51,7 @@ let acquiredUpgrades = 0;
 let last = 0;
 let numberOfClicks = 0; // hur många gånger har spelare eg. klickat
 let active = false; // exempel för att visa att du kan lägga till klass för att indikera att spelare får valuta
-
+let frameStopper=0;
 
 
 
@@ -126,11 +129,40 @@ function step(timestamp) {
         mpsTracker.classList.add('active');
         active = true;
     }
-    if (acquiredUpgrades >=10){
+    if (acquiredUpgrades >=10 && frameStopper<1  ){
+        frameStopper+=1;
     imgChanger.classList.remove("tank")
-    imgChanger.classList.toggle("d-none")
+    imgChanger.classList.add("d-none")
     imgChanger2.classList.toggle("tank")
     }
+    if (acquiredUpgrades >=25 && frameStopper<2  ){
+        frameStopper+=1;
+    imgChanger2.classList.remove("tank")
+    imgChanger2.classList.add("d-none")
+    imgChanger3.classList.toggle("tank")
+    }
+    if (acquiredUpgrades >=50 && frameStopper<3  ){
+        frameStopper+=1;
+    imgChanger3.classList.remove("tank")
+    imgChanger3.classList.add("d-none")
+    imgChanger4.classList.toggle("tank")
+    }
+    if (acquiredUpgrades >=75 && frameStopper<4  ){
+        frameStopper+=1;
+    imgChanger4.classList.remove("tank")
+    imgChanger4.classList.add("d-none")
+    imgChanger5.classList.toggle("tank")
+    }
+    if (acquiredUpgrades >=100 && frameStopper<5  ){
+        frameStopper+=1;
+    imgChanger5.classList.remove("tank")
+    imgChanger5.classList.add("d-none")
+    imgChanger6.classList.toggle("tank")
+    }
+
+
+
+
 
     // achievements, utgår från arrayen achievements med objekt
     // koden nedan muterar (ändrar) arrayen och tar bort achievements

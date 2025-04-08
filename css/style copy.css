@@ -165,6 +165,7 @@ audio {
  * skapa en mer lättläst struktur
  */
 .card {
+    background-color: black;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -174,7 +175,7 @@ audio {
 }
 
 .card:hover {
-    background-color: var(--color-lighter);
+    background-color: lightslategray;
 }
 
 .card p:not(.title) {
@@ -212,8 +213,12 @@ audio {
 }
 
 .tank{
- display: flex;
- 
+
+min-width: 13rem;
+max-width: 14rem;
+min-height: 14rem;
+max-height:15rem ;
+position: fixed;
 
 
 }
@@ -225,7 +230,8 @@ body{
 
 .sidebar{
     display: grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 14rem 1fr ;
+    
+
 }
 

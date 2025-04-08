@@ -44,7 +44,7 @@ clickerButton.classList.add("korv")
  * värden, utan då använder vi let.
  * Läs mer: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
  */
-let money = 100000000;
+let money = 10000000000000000000000000000000000000;
 let moneyPerClick = 1;
 let moneyPerSecond = 0;
 let acquiredUpgrades = 0;
@@ -133,33 +133,37 @@ function step(timestamp) {
         frameStopper+=1;
     imgChanger.classList.remove("tank")
     imgChanger.classList.add("d-none")
-    imgChanger2.classList.toggle("tank")
+    imgChanger2.classList.remove("d-none")
+    imgChanger2.classList.add("tank")
     }
     if (acquiredUpgrades >=25 && frameStopper<2  ){
         frameStopper+=1;
     imgChanger2.classList.remove("tank")
     imgChanger2.classList.add("d-none")
-    imgChanger3.classList.toggle("tank")
+    imgChanger3.classList.remove("d-none")
+    imgChanger3.classList.add("tank")
     }
     if (acquiredUpgrades >=50 && frameStopper<3  ){
         frameStopper+=1;
     imgChanger3.classList.remove("tank")
     imgChanger3.classList.add("d-none")
-    imgChanger4.classList.toggle("tank")
+    imgChanger4.classList.remove("d-none")
+    imgChanger4.classList.add("tank")
     }
     if (acquiredUpgrades >=75 && frameStopper<4  ){
         frameStopper+=1;
-    imgChanger4.classList.remove("tank")
-    imgChanger4.classList.add("d-none")
-    imgChanger5.classList.toggle("tank")
+    imgChanger3.classList.remove("tank")
+    imgChanger3.classList.add("d-none")
+    imgChanger4.classList.remove("d-none")
+    imgChanger4.classList.add("tank")
     }
     if (acquiredUpgrades >=100 && frameStopper<5  ){
         frameStopper+=1;
-    imgChanger5.classList.remove("tank")
-    imgChanger5.classList.add("d-none")
-    imgChanger6.classList.toggle("tank")
+    imgChanger4.classList.remove("tank")
+    imgChanger4.classList.add("d-none")
+    imgChanger5.classList.remove("d-none")
+    imgChanger5.classList.add("tank")
     }
-
 
 
 

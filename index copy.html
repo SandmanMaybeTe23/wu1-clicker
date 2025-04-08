@@ -12,92 +12,53 @@
 
 <body>
     <div class="sidebar">
-    <audio id="swoosh" src="audio/attack-the-d-point.mp3"></audio>
-    <header >  
+        <audio id="swoosh" src="audio/attack-the-d-point.mp3"></audio>
+        <header style="position: relative;">
 
 
-    <img src="img/tank1.png" alt="tank" id="tank1" class="">
-    <img src="img/Fiat 3000.jpg" alt="tank2" id="tank2" class="" >
-    <img src="img/brett-meliti-RgkYMfFopIA-unsplash-removebg-preview.png" alt="" id="tank3">
-    <img src="" alt="" id="tank4">
-    <img src="" alt="" id="tank5">
-    <img src="" alt="" id="tank6">
+            <img src="img/tank1.png" alt="tank" id="tank1" class="">
+            <img src="img/Fiat 3000.jpg" alt="tank2" id="tank2" class="">
+            <img src="img/tank3.jpg" alt="" id="tank3">
+            <img src="img/tank4.webp" alt="" id="tank4">
+            <img src="img/images (7).jpg" alt="" id="tank5">
+            <img src="img/" alt="" id="tank6">
+        </header>
 
-        <div class="hero-gradient"></div>
-        <div class="container hero-content">
-            
-            <div class="lead">
-            </div>
+        <div class="content">
+            <h1>Tank Simulator</h1>
+            <main class="container">
+                <article class="game">
+                    <div class="game-hud">
+
+                        <ul class="game-currency">
+                            <li class="item">
+                                <h3>Research Points: <span id="money"></span></h3>
+                            </li>
+                            <li class="item">
+                                <h3>Research Points per Click: <span id="mpc"></span></h3>
+                            </li>
+                            <li class="item">
+                                <h3>Research Points per seconds: <span id="mps"></span></h3>
+                            </li>
+                            <li class="item">
+                                <h3>Modifications: <span id="upgrades"></span></h3>
+                            </li>
+                        </ul>
+                        <div class="game-controls">
+                            <button id="game-button">Test</button>
+                        </div>
+                    </div>
+                    <div class="w-100">
+                        <h2>Modifications</h2>
+                        <div id="upgradelist"></div>
+                    </div>
+                </article>
+            </main>
+            <div id="msgbox"></div>
+
         </div>
-    </header> 
     </div>
-
-
-    <div class="content">
-    <h1>Tank Simulator</h1>
-    <main class="container">
-        <article class="game">
-            <div class="game-hud">
-               
-                <ul class="game-currency">
-                    <li class="item">
-                        <h3>Research Points: <span id="money"></span></h3>
-                    </li>
-                    <li class="item">
-                        <h3>Research Points per Click: <span id="mpc"></span></h3>
-                    </li>
-                    <li class="item">
-                        <h3>Research Points per seconds: <span id="mps"></span></h3>
-                    </li>
-                    <li class="item">
-                        <h3>Modifications: <span id="upgrades"></span></h3>
-                    </li>
-                </ul>
-                <div class="game-controls">
-                    <button id="game-button">Test</button>
-                </div>
-            </div>
-            <div class="w-100">
-                <h2>Modifications</h2>
-                <div id="upgradelist"></div>
-            </div>
-        </article>
-    </main>
-    <div id="msgbox"></div>
-    <footer class="container footer">
-        <div>
-            <p>Hjälp till att fixa fel och lägga till funktioner:</p>
-            <ul>
-                <li>
-                    <a href="https://github.com/jensnti/clicker/issues">issues</a>
-                </li>
-                <li>
-                    <a href="https://github.com/jensnti/clicker/pulls">pull requests</a>.
-                </li>
-            </ul>
-        </div>
-        <div>
-            <p>Credits:</p>
-            <ul>
-                <li>
-                    <a href="https://freesound.org/s/607251/">Ljudeffekt</a>
-                </li>
-                <li>
-                    Photo by <a
-                        href="https://unsplash.com/@ashleighjoyphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Ashleigh
-                        Joy Photography</a> on <a
-                        href="https://unsplash.com/photos/uyRku9KF2N8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                </li>
-                <li>
-                    Photo by <a
-                        href="https://unsplash.com/es/@bmeliti?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brett
-                        Meliti</a> on <a
-                        href="https://unsplash.com/photos/RgkYMfFopIA?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-                </li>
-            </ul>
-        </div>
-    </footer>
     <script src="js/clicker.js"></script>
 </body>
-</div>
+
 </html>

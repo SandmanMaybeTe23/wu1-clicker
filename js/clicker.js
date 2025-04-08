@@ -31,7 +31,7 @@ imgChanger6.classList.add("d-none")
 
 
 
-clickerButton.textContent = "Jag är nu ändrad på"
+clickerButton.textContent = "Click ME"
 clickerButton.classList.add("korv")
 
 
@@ -170,6 +170,7 @@ function step(timestamp) {
     imgChanger5.classList.add("d-none")
     imgChanger6.classList.remove("d-none")
     imgChanger6.classList.add("tank")
+    clickerButton.textContent = "you win"
     }
 
 

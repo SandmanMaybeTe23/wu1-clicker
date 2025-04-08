@@ -164,6 +164,14 @@ function step(timestamp) {
     imgChanger5.classList.remove("d-none")
     imgChanger5.classList.add("tank")
     }
+    if (acquiredUpgrades >=150 && frameStopper<6  ){
+        frameStopper+=1;
+    imgChanger5.classList.remove("tank")
+    imgChanger5.classList.add("d-none")
+    imgChanger6.classList.remove("d-none")
+    imgChanger6.classList.add("tank")
+    }
+
 
 
 

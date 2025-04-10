@@ -4,7 +4,7 @@
 :root {
     --color-lighter: hsl(80, 10%, 90%);
     --color-light: hsl(80, 10%, 80%);
-    --color-dark: hsl(360, 10%, 10%);
+    --color-dark: hsl(0, 0%, 100%);
     --color-dark-transparent: hsla(360, 10%, 10%, 0.2);
 
     --step--1: clamp(0.94rem, calc(0.94rem + 0vw), 0.94rem);
@@ -62,50 +62,7 @@ audio {
 .footer > * {
     font-size: var(--step--1);
 }
-.hero {
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    grid-template-areas: 'stack';
-    border: black solid 10px;     
 
-}
-
-
-
-.hero-gradient {
-    grid-area: stack;
-    place-self: end;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        0deg,
-        var(--color-dark),
-        var(--color-dark-transparent)
-    );
-}
-
-
-.hero > picture {
-    place-self: center;
-    grid-area: stack;
-    width: 100%;
-    height: 100%;
-}
-
-.hero img {
-
-    aspect-ratio:0 ;
-    object-fit: cover;
-    
-}
-
-.hero-content {
-    grid-area: stack;
-    place-self: end;
-    padding: var(--space-m-l) 0;
-    color: var(--color-light);
-}
 
 @media (max-width: 30rem) {
     .lead {
@@ -208,6 +165,7 @@ audio {
  * skapa en mer lättläst struktur
  */
 .card {
+    background-color: black;
     display: flex;
     justify-content: space-between;
     cursor: pointer;
@@ -217,7 +175,7 @@ audio {
 }
 
 .card:hover {
-    background-color: var(--color-lighter);
+    background-color: lightslategray;
 }
 
 .card p:not(.title) {
@@ -255,8 +213,12 @@ audio {
 }
 
 .tank{
- display: flex;
- 
+
+min-width: 13rem;
+max-width: 14rem;
+min-height: 14rem;
+max-height:15rem ;
+position: fixed;
 
 
 }
@@ -266,19 +228,10 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.sidebar,.content{
-    background: #333;
-    color: #fff;
-    height: 500px;
-    border-radius: 4px;
-    margin: 20px;
-    border:1px solid #777;
-}
 .sidebar{
-    width: 300px;
-    float: left;
-    position: absolute;
+    display: grid;
+    grid-template-columns: 14rem 1fr ;
+    
+
 }
-.content{
-    width: 630px;
-}
+

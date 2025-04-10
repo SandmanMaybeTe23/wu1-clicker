@@ -44,7 +44,7 @@ clickerButton.classList.add("korv")
  * värden, utan då använder vi let.
  * Läs mer: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let
  */
-let money = 10000000000000000000000000000000000000;
+let money = 0;
 let moneyPerClick = 1;
 let moneyPerSecond = 0;
 let acquiredUpgrades = 0;
